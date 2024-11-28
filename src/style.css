@@ -1,0 +1,30 @@
+.fab{
+    font-size: 40px;
+}
+div.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1/1;
+    background-color: darkseagreen;
+
+}
+
+.hidden > i {
+display: none !important ;
+}
+
+.ice{
+    pointer-events: none;
+}
+.peer{
+    pointer-events: none;
+}
+div :hover{
+    background-color: chartreuse;
+    box-shadow: 10px 20px darkolivegreen;
+    border-radius: 10px;
+}
+.bb{
+
+}
