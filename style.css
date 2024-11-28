@@ -40,8 +40,19 @@ color: goldenrod;
 }
 .imgg{
     border-radius: 50% 20%;
+display: flex;
     object-fit: cover;
     width: 150px;
+}
+button{
+   border-radius: 20px ;
+   padding: 5px;
+   display: grid;
+   align-items: center;
+   justify-content: center;
+   color: darkgreen;
+ text-transform: capitalize;
+
 }
 .svgg{
     display: flex;

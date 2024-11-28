@@ -51,7 +51,7 @@ function boxClick(evt){
             cunt += 2;
             if(cunt === boxing.length){
                 setTimeout( () => {
-                   document.classList.add("bb")
+                   alert("win")
                 } , 500 )
                 }
             
