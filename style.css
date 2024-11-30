@@ -43,13 +43,11 @@ color: goldenrod;
 display: flex;
     object-fit: cover;
     width: 150px;
+
 }
 button{
    border-radius: 20px ;
    padding: 5px;
-   display: grid;
-   align-items: center;
-   justify-content: center;
    color: darkgreen;
  text-transform: capitalize;
 
@@ -73,4 +71,26 @@ footer{
 }
 .black{
     background-color: black;
+}
+
+.pad{
+    padding-left: 80px;
+    padding-top: 20px;
+}
+ul{
+ 
+    li{
+        
+        padding-top: 10px;
+        text-transform:  capitalize;
+        padding-left: 20px;
+        color: rgb(16, 87, 63);
+    
+    }
+}
+.para{
+   color: darkgrey;
+        display: grid;
+        justify-content: center;
+
 }
