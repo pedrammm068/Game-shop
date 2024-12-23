@@ -6,6 +6,7 @@
 body {
   background-color: #ffffff;
     width: 100%;
+padding: 20px;
 }
 .he{
     display: grid;
@@ -45,10 +46,19 @@ display: flex;
     width: 150px;
 
 }
-button{
-   border-radius: 20px ;
-   padding: 5px;
-   color: darkgreen;
+
+input{
+    margin: 10px;
+ border-radius: 4px;
+    padding: 4px;
+}
+
+#get-ht{
+background-color: darkgreen;
+   border-radius: 10px ;
+   padding: 6px;
+   width: 8%;
+   color: white;
  text-transform: capitalize;
 
 }
@@ -78,13 +88,13 @@ footer{
     padding-top: 20px;
 }
 ul{
- 
+    list-style-type: decimal;
+ padding-left: 111px;
+
     li{
-        
         padding-top: 10px;
         text-transform:  capitalize;
-        padding-left: 20px;
-        color: rgb(16, 87, 63);
+        color: goldenrod;
     
     }
 }
@@ -94,3 +104,4 @@ ul{
         justify-content: center;
 
 }
+

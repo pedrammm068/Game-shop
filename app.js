@@ -1,7 +1,4 @@
 
-
-
-
 const todo = document.getElementById("todos");
 const box = document.getElementById("ht-box");
 const list = document.getElementById("list")
@@ -12,11 +9,15 @@ function clice() {
   
     if (val) {
         const ing = `
-        <li id="${val}" style="red">
+        <li id="${val}">
         ${val}
    
-         <button onclick="del(this)">delete</button>
-              <button onclick="ed(this)" >edit</button>
+         <button style="background-color: red ; border-radius: 6px ; padding: 4px;width: 6%;color: white;text-transform: capitalize;" onclick="del(this)">delete</button>
+              <button style="background-color: grey;  border-radius: 6px ;
+   padding: 4px;
+   width: 6%;
+   color: white;
+ text-transform: capitalize;" onclick="ed(this)" >edit</button>
                </li>
         `
 
@@ -24,6 +25,7 @@ function clice() {
 
     }
 }
+
 
 
 
@@ -48,19 +50,3 @@ function ed(editing){
 
 
 
-
-
-// function raded() {
-//     const ing = ad.map( rando => {
-//     return `
-//   <li id="${rando}" style="red">
-//         ${rando}
-   
-//          <button onclick="del(this)">delete</button>
-//               <button>edit</button>
-//                </li>   `
-// })
-// }
-// const temp = ing.join("/")
-
-// list.innerHTML = ing

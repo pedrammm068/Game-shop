@@ -21,7 +21,7 @@ imgrandom()
 const boxing = [...document.querySelectorAll(".box")]
 const cont = document.getElementById("co")
 
-for(let i = 0; i < boxing.length ; i++){
+ for(let i = 0; i < boxing.length ; i++){
     const rnd = Math.floor(Math.random() * boxing.length)
     const temp = boxing[rnd]
     boxing [rnd] = boxing[i];
@@ -113,5 +113,6 @@ setTimeout(function(){
 
 for (const box of boxing){
     box.addEventListener("click", boxClick)
-
+  
 };
+box.classList.add("bodyy")
