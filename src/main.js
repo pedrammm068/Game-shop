@@ -8,7 +8,7 @@ function imgrandom() {
     const rndImage = Math.floor(Math.random() * imagesAddress.length)
 
 
-    document.body.style = `background-image: url(${imagesAddress[rndImage]}) ; background-size :cover ; background-repeat :no-repeat ; `
+    document.body.style = `background-image: url(${imagesAddress[rndImage]}) ;  background-size :cover ; background-repeat :no-repeat ; `
 
 
 };
@@ -20,6 +20,9 @@ imgrandom()
 
 const boxing = [...document.querySelectorAll(".box")]
 const cont = document.getElementById("co")
+const mod = document.querySelector(".modal")
+const modbg = document.querySelector(".modalbg")
+const cl = document.querySelector(".click")
 
  for(let i = 0; i < boxing.length ; i++){
     const rnd = Math.floor(Math.random() * boxing.length)
@@ -51,7 +54,8 @@ function boxClick(evt){
             cunt += 2;
             if(cunt === boxing.length){
                 setTimeout( () => {
-                   alert("win")
+            mod.classList.remove("hidden")
+
                 } , 500 )
                 }
             
@@ -115,4 +119,9 @@ for (const box of boxing){
     box.addEventListener("click", boxClick)
   
 };
-box.classList.add("bodyy")
+function insted() {
+    console.log("hi")
+    window.location.reload();
+    
+}
+

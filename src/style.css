@@ -6,7 +6,7 @@ div.box{
     justify-content: center;
     align-items: center;
     aspect-ratio: 1/1;
-    background-color: rgba(0, 0, 139, 0.678);
+    background-color: rgba(209, 209, 211, 0.678);
 
 }
 
@@ -19,23 +19,5 @@ display: none !important ;
 }
 .peer{
     pointer-events: none;
-}
-div :hover{
-    background-color: blue;
-    box-shadow: 10px 20px white;
-    border-radius: 10px;
-}
-.bodyy{
-box-shadow: 80px 80px red;
-width: 80%;
-color: aquamarine;
 
-}
-img {
-    width: 100%;
-}
-
-.modal{
-    
-width: 100px;
 }
