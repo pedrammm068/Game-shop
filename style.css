@@ -7,6 +7,8 @@ body {
   background-color: #ffffff;
     width: 100%;
 padding: 20px;
+margin: 0;
+
 }
 .he{
     display: grid;
@@ -104,4 +106,42 @@ ul{
         justify-content: center;
 
 }
+.card{
+    
+    border: 2px solid darkgrey;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 10px 7px 20px rgba(255, 217, 0, 0.767);
+}
+.card img {
+    width: 100%;
+height: 300px;
+object-fit: contain;
+}
+.ta{
+    position: absolute;
+top: 0;
+left: 0;
+padding: 6px 10px;
+background-color: rgba(218, 165, 32, 0.589);
+}
+.sa{
+    position: absolute;
+top: 0;
+right: 0;
+padding: 6px 10px;
+background-color: rgba(218, 165, 32, 0.76);
+}
+.all-cards{
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    gap: 10px;
+}
 
+.filter{
+    width: 300px;
+}
+.forto{
+    display: flex;
+}

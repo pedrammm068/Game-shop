@@ -6,7 +6,7 @@ const list = document.getElementById("list")
 
 function clice() {
     const val = todo.value
-  
+
     if (val) {
         const ing = `
         <li id="${val}">
@@ -32,10 +32,54 @@ function clice() {
 function del(clickdel) {
     clickdel.parentElement.remove()
 }
-function ed(editing){
+function ed(editing) {
 
 }
+// 
 
+const alling = document.querySelector(".all-cards")
+const fil = document.querySelector(".filter")
+
+function arr() {
+    const all = BOOKS.map(book => {
+        return `
+         
+    <div class="card">
+        <img src="./imges/${book.imgSrc}" alt="">
+        <div>
+            <h2>${book.title}</h2>
+            <p>${book.author}</p>
+        </div>
+        <span class="ta">${book.genre}</span>
+        <span class="sa">${book.published_date}</span>
+    </div>
+
+        `
+    }).join("")
+
+    alling.innerHTML = all
+}
+arr()
+function nev(){
+ const ar = []
+ for (const book of BOOKS) {
+    if(!ar.includes(book.author)){
+        ar.push(book.author)
+    }
+    
+ }
+const ckecbox = ar.map( a => {
+    return `
+       <div>
+            <label for="${ar}">${ar}</label>
+            <input  type="checkbox" id="${ar}">
+        </div>
+
+    `
+}).join("")
+fil.innerHTML = ckecbox
+}
+nev()
 
 
 
