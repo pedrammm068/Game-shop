@@ -39,9 +39,12 @@ function ed(editing) {
 
 const alling = document.querySelector(".all-cards")
 const fil = document.querySelector(".filter")
+const seAu = []
+const seLa = []
+const seGe = []
 
-function arr() {
-    const all = BOOKS.map(book => {
+function arr(list) {
+    const all = list.map(book => {
         return `
          
     <div class="card">
@@ -59,34 +62,100 @@ function arr() {
 
     alling.innerHTML = all
 }
-arr()
+arr(BOOKS)
 function nev(){
  const ar = []
  for (const book of BOOKS) {
     if(!ar.includes(book.author)){
         ar.push(book.author)
     }
-    
+
+
  }
+
 const ckecbox = ar.map( a => {
     return `
-       <div>
-            <label for="${ar}">${ar}</label>
-            <input  type="checkbox" id="${ar}">
+       <div class="boxvan">
+            <label for="${a}">${a}</label>
+            <input onchange="handelau(event)" type="checkbox" id="${a} value="${a}">
         </div>
-
     `
+co
 }).join("")
 fil.innerHTML = ckecbox
+
+
+const arin = []
+for (const book of BOOKS) {
+   if(!arin.includes(book.language)){
+       arin.push(book.language)
+   }
+   
+}
+const ckecbo = arin.map( aa => {
+   return `
+
+      <div class="boxtoo">
+           <label for="${aa}">${aa}</label>
+           <input onchange="handella(event)"  type="checkbox" id="${aa}" value="${aa}">
+       </div>
+   `
+}).join("")
+fil.innerHTML += ckecbo
+
+
+const ari = []
+for (const book of BOOKS) {
+   if(!ari.includes(book.genre)){
+       ari.push(book.genre)
+   }
+   
+}
+const ckecb = ari.map( ar => {
+   return `
+
+      <div class="boxtri">
+           <label for="${ar}">${ar}</label>
+           <input  onchange="handelge(event)"  type="checkbox" id="${ar}" value="${ar}">
+       </div>
+   `
+}).join("")
+fil.innerHTML += ckecb
 }
 nev()
 
+function handelau(evt){
+  if (evt.target.checked){
+seAu.push(evt.target.value)
+  } else {
+const findall = seAu.findIndex(itme => itme === evt.target.value)
+seAu.splice(findall , 1)
+  }
+  handFil()
 
+}
 
+function handella(evt){
+    if (evt.target.checked){
+        seLa.push(evt.target.value)
+          } else {
+        const findall = seLa.findIndex(itme => itme === evt.target.value)
+          }
+}
 
-
-
-
+function handelge(evt){
+    if (evt.target.checked){
+        seGe.push(evt.target.value)
+          } else {
+            // seGe = seGe.filter(i => i !== evt.target.value)
+        const findall = seGe.findIndex(itme => itme === evt.target.value)
+          }
+}
+function handFil(){
+const authorsfil = BOOKS.filter(book => seAu.includes(book.author) )
+console.log(authorsfil)
+return authorsfil
+}
 
 
 

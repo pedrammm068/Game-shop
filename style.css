@@ -112,7 +112,7 @@ ul{
     border-radius: 10px;
     overflow: hidden;
     position: relative;
-    box-shadow: 10px 7px 20px rgba(255, 217, 0, 0.767);
+    box-shadow: 10px 7px 20px rgba(255, 217, 0, 0.555);
 }
 .card img {
     width: 100%;
@@ -131,7 +131,7 @@ background-color: rgba(218, 165, 32, 0.589);
 top: 0;
 right: 0;
 padding: 6px 10px;
-background-color: rgba(218, 165, 32, 0.76);
+background-color: rgba(218, 165, 32, 0.651);
 }
 .all-cards{
     display: grid;
@@ -144,4 +144,39 @@ background-color: rgba(218, 165, 32, 0.76);
 }
 .forto{
     display: flex;
+}
+.boxvan {
+    border: 1px solid black;
+    padding: 2px 6px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 6px 20px 4px 20px ;
+    background-color: rgba(218, 165, 32, 0.603);
+
+}
+.boxtoo{
+    border: 1px solid black;
+    padding: 2px 6px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 30px 20px -20px 20px ;
+    background-color: rgba(255, 217, 0, 0.842);
+
+}
+
+
+.boxtri{
+    border: 1px solid black;
+    padding: 2px 6px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 50px 20px -40px 20px ;
+    background-color: rgb(218, 165, 32);
+
+}
+
+
+.spa{
+    border: 1px solid black;
+display: flex;
 }
