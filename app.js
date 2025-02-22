@@ -5,12 +5,13 @@ const list = document.getElementById("list")
 const alling = document.querySelector(".all-cards")
 const fil = document.querySelector(".filter")
 const onSabad = document.querySelector(".Sabad-kharid")
+const onSabadmob = document.querySelector(".Sabad-kharidmob")
+
+
 const seAu = []
 const seLa = []
 const seGe = []
 const Sabd = JSON.parse(localStorage.getItem("Sabd")) || []
-
-// 
 
 
 function arr(list) {
@@ -45,7 +46,39 @@ function arr(list) {
 
 }
 arr(BOOKS)
+// function arr(list , lim = 8) {
+//     const Slidlist = list.slice(0 , lim)
+    
+//     const all = Slidlist.map(book => {
+//         return `
+         
+//     <div class="card">
+//         <img src="./imges/${book.imgSrc}" alt="">
+//         <div>
+//             <h2>${book.title}</h2>
+//             <p class="pau">${book.author}</p>
+//               ${Sabd.includes(book.id) ? (
+//                ` <div class="sabadckaridiv">
+//                 <button onclick="Remosa(${book.id})" class="sabadre">حذف از سبد خرید</button>
+//                 </div>`
+//               ) : (
+//              `   <div class="sabadckaridiv">
+//                 <button onclick="Addsa(${book.id})" class="sabadckarid">اضافه به سبد خرید</button>
+//                 </div>`
+//               )} 
+          
+//         </div>
+//         <span class="ta">${book.genre}</span>
+//         <span class="sa">${book.published_date}</span>
+//     </div>
 
+//         `
+//     }).join("")
+
+//     alling.innerHTML = all
+
+// }
+// arr(BOOKS , 8)
 function nev(){
 
     
@@ -99,7 +132,7 @@ const ckecbox = ar.map( a => {
    return `
       <div class="boxtri bgvan">
            <label for="${a}">${a}</label>
-           <input onchange="handelau(event)" type="checkbox" id="${a} value="${a}">
+           <input onchange="handelau(event)" type="checkbox" id="${a}" value="${a}">
        </div>
    `
 }).join("")
@@ -109,6 +142,7 @@ fil.innerHTML += ckecbox
 nev()
 
 function handelau(evt){
+
   if (evt.target.checked){
 seGe.push(evt.target.value)
   } else {
@@ -116,7 +150,6 @@ const findall = seGe.findIndex(itme => itme === evt.target.value)
 seGe.splice(findall , 1)
   }
   handFil()
-
 }
 
 function handella(evt){
@@ -127,6 +160,7 @@ function handella(evt){
         seLa.splice(findall , 1)
           }
           handFil()
+ 
 }
 function Filclick() {
     fil.classList.toggle("hid")
@@ -171,10 +205,15 @@ if(seGe.length != 0){
         
 
 arr(res) 
+
 }
 function OnclicKSabad() {
     RenderAddSabad()
     onSabad.classList.toggle("hid")
+}
+function OnclicKSabadmob() {
+    RenderAddSabad()
+onSabadmob.classList.toggle("hid")
 }
 function RenderAddSabad(){
     const list = Sabd.map(sab => BOOKS.find(book => book.id === sab))
@@ -195,6 +234,7 @@ return `
 `
     }).join("")
     onSabad.innerHTML = temp
+    onSabadmob.innerHTML = temp
 }
 RenderAddSabad()
 function RemosabadAdd(id){
@@ -202,14 +242,6 @@ function RemosabadAdd(id){
     Sabd.splice(fond , 1)
     localStorage.setItem("Sabd" , JSON.stringify(Sabd))
     RenderAddSabad(Sabd)
+    handFil()
+
 }
-// function text(){
-//     const arfo  = Sabd.length
-// console.log(arfo)
-// }
-// text()
-
-
-
-
-

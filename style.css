@@ -10,6 +10,12 @@ padding: 0px;
 margin: 0;
 
 }
+a{
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+
+}
 .he{
     display: grid;
     align-items: center;
@@ -104,7 +110,7 @@ ul{
     border-radius: 10px;
     overflow: hidden;
     position: relative;
-    box-shadow: 10px 7px 20px rgba(255, 217, 0, 0.555);
+    box-shadow: 10px 7px 20px rgba(144, 138, 100, 0.555);
     height: 100%;
 }
 .card img {
@@ -118,6 +124,23 @@ top: 0;
 left: 0;
 padding: 6px 10px;
 background-color: rgba(218, 165, 32, 0.589);
+}
+.saf{
+    margin-top: 8px;
+    margin-bottom: 8px;
+  
+    display: flex;
+align-items: center;
+    gap: 20px;
+     justify-content: center;
+     p {
+        text-align: center;
+        border: 1px solid black;
+        padding: 16px 20px;
+
+      
+        border-radius: 6px;
+     }
 }
 .sa{
     position: absolute;
@@ -169,6 +192,15 @@ background-color: rgba(218, 165, 32, 0.651);
 
 }
 
+.max-w{
+    max-width: 1580px;
+    width: 100%;
+}
+.cen {
+    display: flex ;
+     flex-direction: column;
+     align-items: center;
+}
 
  
 .spa{
@@ -222,6 +254,16 @@ padding: 5px;
 display: none;
 overflow: auto;
 
+}
+.Sabad-kharidmob {
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    left: 0;
+    top:0 ;
+    height: 100%;
+    width: 100%;
+display: none;
+overflow: auto;
 }
 .is{
     display: flex
